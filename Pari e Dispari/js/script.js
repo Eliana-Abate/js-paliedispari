@@ -11,7 +11,8 @@ var numberChoice = getNumber();
 
 var computerChoice = computerRandom();
 
-
+var sum = numberChoice + computerChoice;
+console.log('La somma del numero scelto dall\'utente e del numero scelto dal computer è: ' + sum);
 
 
 
