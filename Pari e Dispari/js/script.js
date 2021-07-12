@@ -11,8 +11,28 @@ var numberChoice = getNumber();
 
 var computerChoice = computerRandom();
 
-var sum = numberChoice + computerChoice;
-console.log('La somma del numero scelto dall\'utente e del numero scelto dal computer è: ' + sum);
+var sumResult = sumCheck(numberChoice, computerChoice);
+console.log('La somma del numero scelto dall\'utente e del numero scelto dal computer è: ' + sumResult);
+
+var displaySumCheck = document.getElementById('sum-check');
+
+
+
+
+
+function sumCheck (num1, num2) {
+    var sum = num1 + num2;
+    
+    return sum;
+}
+
+
+if (sumResult % 2 === 0) {
+    displaySumCheck.innerHTML = 'La somma dei due numeri è pari';
+} else {
+    displaySumCheck.innerHTML = 'La somma dei due numeri è dispari';
+
+}
 
 
 
