@@ -11,7 +11,7 @@ console.log(userWord + 'è palindroma?' + return);
 function checkPalindrome (word) {
     word = prompt('Inserisci una parola');
 
-    return (word);
+    return word;
 }
 
 
