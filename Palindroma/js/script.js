@@ -5,7 +5,7 @@ Creare una funzione per capire se la parola inserita è palindroma */
 userWord = checkPalindrome();
 
 var result = isPalindrome(userWord);
-console.log(userWord + 'è palindroma?' + result);
+console.log(userWord + ' è palindroma? ' + result);
 
 
 function checkPalindrome (word) {
