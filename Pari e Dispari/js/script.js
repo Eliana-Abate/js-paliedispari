@@ -7,7 +7,11 @@ Dichiariamo chi ha vinto. */
 
 var choice = evenOddChoice();
 
-var number = getNumber();
+var numberChoice = getNumber();
+
+var computerChoice = computerRandom();
+
+
 
 
 function evenOddChoice(userChoice) {
@@ -36,3 +40,13 @@ function getNumber(userNumber) {
     console.log('Il numero scelto dall\'utente è: ' + userNumber);
     return userNumber;
   }
+  
+
+
+function computerRandom (computerNumber) {
+
+    computerNumber = Math.floor(Math.random() * 5) + 1;
+    console.log('Il numero scelto dal computer è: ' + computerNumber);
+
+    return computerNumber;
+}
