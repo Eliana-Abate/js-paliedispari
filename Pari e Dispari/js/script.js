@@ -98,9 +98,9 @@ var displayWinner = document.getElementById('winner');
 //! CONDITIONS
 
 if (sumCheck) {
-    displaySumCheck.innerText = 'La somma dei due numeri è pari';
+    displaySumCheck.innerText = 'La somma dei due numeri è pari: ' + sumResult;
 } else {
-    displaySumCheck.innerText = 'La somma dei due numeri è dispari';
+    displaySumCheck.innerText = 'La somma dei due numeri è dispari: ' + sumResult;
 }
 
 
