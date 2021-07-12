@@ -14,6 +14,8 @@ var computerChoice = computerRandom();
 
 
 
+
+
 function evenOddChoice(userChoice) {
     
     userChoice = prompt('Scegli: pari o dispari?').toLowerCase();
@@ -31,16 +33,16 @@ function evenOddChoice(userChoice) {
 
 function getNumber(userNumber) {
     
-    userNumber = prompt('Inserisci un numero da 1 a 5');
+    userNumber = parseInt(prompt('Inserisci un numero da 1 a 5'));
 
     while (isNaN(userNumber) || userNumber < 1 || userNumber > 5) {
-      userNumber = prompt('Inserisci un numero da 1 a 5');
+      userNumber = parseInt(prompt('Inserisci un numero da 1 a 5'));
     }
   
     console.log('Il numero scelto dall\'utente è: ' + userNumber);
     return userNumber;
   }
-  
+
 
 
 function computerRandom (computerNumber) {
