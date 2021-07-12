@@ -15,9 +15,28 @@ var sumResult = sumTotal(numberChoice, computerChoice);
 console.log('La somma del numero scelto dall\'utente e del numero scelto dal computer è: ' + sumResult);
 
 var sumCheck = isEven(sumResult);
-console.log(sumCheck);
+console.log('La somma dei due numeri è pari? ' + sumCheck);
+
+//print
 
 var displaySumCheck = document.getElementById('sum-check');
+var displayWinner = document.getElementById('winner');
+
+ //conditions
+if (sumCheck) {
+    displaySumCheck.innerText = 'La somma dei due numeri è pari';
+} else {
+    displaySumCheck.innerText = 'La somma dei due numeri è dispari';
+}
+
+
+if (sumCheck && choice === 'pari') {
+    displayWinner.innerText = 'Hai vinto!';
+} else if (sumCheck === false && choice === 'dispari') {
+    displayWinner.innerText = 'Hai vinto!';
+} else {
+    displayWinner.innerText = 'Hai perso!';
+}
 
 
 
