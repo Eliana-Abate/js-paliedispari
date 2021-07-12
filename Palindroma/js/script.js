@@ -18,7 +18,7 @@ console.log(userWord + ' è palindroma? ' + result);
 
 
 function checkPalindrome (word) {
-    word = prompt('Inserisci una parola').toLocaleLowerCase();
+    word = prompt('Inserisci una parola').toLowerCase();
 
     return word;
 }
