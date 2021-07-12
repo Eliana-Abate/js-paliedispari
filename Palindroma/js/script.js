@@ -2,7 +2,7 @@
 Chiedere all’utente di inserire una parola
 Creare una funzione per capire se la parola inserita è palindroma */
 
-userWord = checkPalindrome();
+var userWord = checkPalindrome();
 console.log(userWord);
 
 var result = isPalindrome(userWord);
@@ -27,7 +27,7 @@ function isPalindrome(emme) {
       if (emme[i] !== emme[emme.length - i - 1]){
       return false;
       } 
-      
+
     } 
     return true;
   } 
