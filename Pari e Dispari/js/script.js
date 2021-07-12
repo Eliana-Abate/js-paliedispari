@@ -5,6 +5,10 @@ Sommiamo i due numeri
 Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto. */ 
 
+
+
+//! VARIABLES 
+
 var choice = evenOddChoice();
 
 var numberChoice = getNumber();
@@ -17,50 +21,10 @@ console.log('La somma del numero scelto dall\'utente e del numero scelto dal com
 var sumCheck = isEven(sumResult);
 console.log('La somma dei due numeri è pari? ' + sumCheck);
 
-//print
-
-var displaySumCheck = document.getElementById('sum-check');
-var displayWinner = document.getElementById('winner');
-
- //conditions
-if (sumCheck) {
-    displaySumCheck.innerText = 'La somma dei due numeri è pari';
-} else {
-    displaySumCheck.innerText = 'La somma dei due numeri è dispari';
-}
-
-
-if (sumCheck && choice === 'pari') {
-    displayWinner.innerText = 'Hai vinto!';
-} else if (sumCheck === false && choice === 'dispari') {
-    displayWinner.innerText = 'Hai vinto!';
-} else {
-    displayWinner.innerText = 'Hai perso!';
-}
 
 
 
-
-
-function sumTotal (num1, num2) {
-    var sum = num1 + num2;
-    
-    return sum;
-}
-
-function isEven(sum) {
-    if (sum % 2 === 0) {
-      
-      return true;
-    }
-    return false;
-  }
-
-
-
-
-
-
+//! FUNCTIONS 
 
 function evenOddChoice(userChoice) {
     
@@ -73,7 +37,6 @@ function evenOddChoice(userChoice) {
     console.log('L\'utente ha scelto: ' + userChoice); 
     return userChoice;
   }
-
 
 
 
@@ -98,5 +61,56 @@ function computerRandom (computerNumber) {
 
     return computerNumber;
 }
+
+
+function sumTotal (num1, num2) {
+    var sum = num1 + num2;
+    
+    return sum;
+}
+
+function isEven(sum) {
+    if (sum % 2 === 0) {
+      
+      return true;
+    }
+    return false;
+  }
+
+
+
+//! PRINT IN HTML
+
+var displayUserChoice = document.getElementById('user-choice');
+displayUserChoice.innerHTML = 'L\'utente ha scelto: ' + choice;
+
+var displayUserNumber = document.getElementById('user-number');
+displayUserNumber.innerHTML = 'Il numero scelto dall\'utente è: ' + numberChoice;
+
+var displayComputerNumber = document.getElementById('computer-choice');
+displayComputerNumber.innerHTML = 'Il numero generato dal computer è: ' + computerChoice;
+
+var displaySumCheck = document.getElementById('sum-check');
+var displayWinner = document.getElementById('winner');
+
+
+
+//! CONDITIONS
+
+if (sumCheck) {
+    displaySumCheck.innerText = 'La somma dei due numeri è pari';
+} else {
+    displaySumCheck.innerText = 'La somma dei due numeri è dispari';
+}
+
+
+if (sumCheck && choice === 'pari') {
+    displayWinner.innerText = 'Hai vinto!';
+} else if (sumCheck === false && choice === 'dispari') {
+    displayWinner.innerText = 'Hai vinto!';
+} else {
+    displayWinner.innerText = 'Hai perso!';
+}
+
 
 
